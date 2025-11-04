@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fixa</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Fixa">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f5f5f7;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1 { text-align: center; margin: 20px 0; color: #000; }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin: 12px 0;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background: #007AFF;
+      color: white;
+      cursor: pointer;
+    }
+    .btn-health { background: #FF3B30; }
+    .btn-export { background: #34C759; }
+    .status { text-align: center; margin-top: 20px; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>🔧 Fixa</h1>
+  <button class="btn" onclick="showApplianceForm()">🛠️ Добавить технику</button>
+  <button class="btn btn-health" onclick="showSymptomForm()">❤️ Здоровье семьи</button>
+  <button class="btn btn-export" onclick="exportToPDF()">🖨️ Экспорт в PDF</button>
+  <div id="status" class="status"></div>
+
+  <script src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
